@@ -1,0 +1,99 @@
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding-inline: 12rem;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.footer-container > * {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+.footer-section {
+  padding-inline: 1rem;
+  flex-wrap: wrap;
+}
+.footer-bottom {
+  color: var(--white);
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-left: 2rem;
+  position: relative;
+  bottom: 1rem;
+}
+.footer-bottom > * {
+  flex: 1;
+}
+.logo-section {
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.logo-section p {
+  color: var(--white);
+}
+.social-icons {
+  color: var(--white);
+  order: 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-icons img {
+  padding-right: 2rem;
+}
+/*Ipads/tablets*/
+@media (width < 50rem) {
+  .footer-bottom {
+    flex-direction: column;
+  }
+  .footer-container > * {
+    flex-basis: 100%;
+  }
+  .logo-section p {
+    text-align: center;
+  }
+}
+
+/* Adjustments for smaller screens(phones) */
+@media (max-width: 1024px) {
+  footer {
+    padding-inline: 4rem; /* Reduce the horizontal padding */
+  }
+
+  .footer-container {
+    flex-direction: row; /* Stack the footer sections vertically */
+    padding: 3rem; /* Reduce the padding around the footer sections */
+    gap: 30px;
+  }
+
+  .footer-section {
+    padding-inline: 0; /* Remove the horizontal padding from the footer sections */
+    margin-bottom: 1rem; /* Add some space between the footer sections */
+  }
+
+  .footer-bottom {
+    justify-content: center; /* Center the content horizontally */
+    margin: 1rem 0; /* Adjust the margin */
+  }
+
+  .social-icons {
+    position: static; /* Remove the absolute positioning */
+    margin-top: 1rem; /* Add some space between the footer sections and social icons */
+    text-align: center; /* Center the social icons horizontally */
+  }
+
+  .social-icons img {
+    padding: 0.5rem; /* Adjust the padding around the social icons */
+  }
+}

@@ -1,0 +1,104 @@
+#dashboardHome {
+  display: grid;
+  grid-template-columns: minmax(350px, auto) 3fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-areas:
+    "Vnav discover"
+    "Vnav nearByRestaurant "
+    "Vnav popularRestaurant";
+  padding-right: 2, 6%;
+}
+#discover,
+#restaurant-nearby,
+#popular-restaurant {
+  padding-left: 5%;
+  font-family: var(--product_sans);
+  padding-block: 2%;
+}
+
+/****************    Discover section style ************************/
+#discover {
+  grid-area: discover;
+  position: relative;
+  max-width: 1200px;
+  height: max-content;
+}
+.discover-content {
+  padding-top: 8%;
+}
+p.welcome-traveler,
+.discover-content h1 {
+  line-height: 0.3;
+  text-transform: capitalize;
+}
+p.welcome-traveler {
+  letter-spacing: 0.024px;
+  color: #919697;
+}
+.input-form {
+  width: 293px;
+  height: 51px;
+  border-radius: 10px;
+  padding-left: 13px;
+}
+.input-form::placeholder {
+  color: #71716b;
+}
+.btn-search {
+  background: #235784;
+  width: 115px;
+  height: 52px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 1.4%;
+}
+.profile {
+  position: absolute;
+  top: 35px;
+  right: 105px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 165px;
+  height: 48px;
+  background: var(--black);
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-block: 2px;
+  color: var(--white);
+}
+.avatar {
+  width: 25%;
+  height: 86%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+/*End of Discover section style*/
+/*Restaurant nearby section style*/
+#restaurant-nearby {
+  grid-area: nearByRestaurant;
+}
+
+.restaurant-nearby-content h2,
+.popular-restaurant-nearby-content h2 {
+  margin-bottom: 3rem;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.cards-container > * {
+  flex-basis: 220px;
+}
+
+/*End of Restaurant section style*/
+/*Popular section style*/
+#popular-restaurant {
+  grid-area: popularRestaurant;
+}
+/*End of Popular section style*/
+#navigationBar {
+  grid-area: Vnav;
+  grid-row: span 3;
+}

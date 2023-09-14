@@ -1,0 +1,19 @@
+.toggle_container {
+    width: 45px;
+    height:25px;
+    flex-shrink: 0;
+    background-color: var(--foundation_pry_p_300);
+    border-radius: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.toggle_container > .toggle_container--circle{
+    width:17px;
+    height:17px;
+    padding:0.3rem;
+    border-radius: 50%;
+    background-color:white;
+    position:absolute;
+    left:0;
+}

@@ -1,0 +1,74 @@
+#favorite{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-rows: minmax(300px), auto;
+    grid-template-areas: 
+        "vNav fav"
+        "vNav places";
+    padding-right: 3rem;
+}
+
+#your-favorite{
+    grid-area: fav;
+    position: relative;
+    padding-top: 3rem;
+}
+
+#map{
+    grid-area: map;
+    max-height: 130rem;
+    min-height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 700px;
+    background: green;
+    display:flex;
+    flex-direction: column;
+}
+
+.profile{
+    position: absolute;
+    top: 25px;
+    right: 105px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 165px;
+    height: 48px;
+    background: var(--black);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-block: 2px;
+    color:var(--white);
+}
+
+#places{
+    padding-top: 2rem;
+    grid-area: places;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    
+}
+#navigation{
+    grid-area: vNav;
+}
+
+@media (max-width: 1000px){
+ .profile{
+    background: none;
+    right: -80px;
+ }
+ p,h1{
+    padding-left: 1rem; 
+    line-height: .2rem;
+    text-align: center;
+ }
+ #your-favorite{
+    padding-top: 5rem;
+ }
+
+}
